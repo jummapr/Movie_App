@@ -8,8 +8,8 @@ export const upcomingMovies: string = `https://api.themoviedb.org/3/movie/now_pl
 export const popularMovie = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
 export const searchMovies = (keyword: string) => {
-    return `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${keyword}`;
-  };
+  return `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${keyword}`;
+};
   export const movieDetails = (id: number) => {
     return `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`;
   };

@@ -26,7 +26,7 @@ const InputHeader = ({searchFunction}:any) => {
         placeholder="Search movies.."
         placeholderTextColor={COLORS.WhiteRGBA32}
       />
-      <TouchableOpacity style={styles.searchIcon} onPress={() => searchFunction()}>
+      <TouchableOpacity style={styles.searchIcon} onPress={() => searchFunction(SearchText)}>
         <CustomIcon
           name="search"
           color={COLORS.Orange}

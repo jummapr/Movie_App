@@ -8,17 +8,8 @@ import {
   SPACING,
 } from '../theme/theme';
 
-interface SubMovieCardProps {
-  imagePath: string;
-  title: string;
-  cardFunction: () => void;
-  cardWidth: number;
-  isFirst: boolean;
-  shouldMargintedatEnd: true;
-  isLast: boolean;
-}
 
-const SubMovieCard: FC<SubMovieCardProps> = ({
+const SubMovieCard = ({
   imagePath,
   title,
   cardFunction,
@@ -26,7 +17,8 @@ const SubMovieCard: FC<SubMovieCardProps> = ({
   isFirst,
   isLast,
   shouldMargintedatEnd,
-}) => {
+  shouldMargintedAround
+}: any) => {
   return (
     <TouchableOpacity onPress={() => cardFunction()}>
       <View
@@ -39,7 +31,7 @@ const SubMovieCard: FC<SubMovieCardProps> = ({
               ? {marginRight: SPACING.space_36}
               : {}
             : {},
-        //   shouldMargintedAround ? {margin: SPACING.space_12} : {},
+          shouldMargintedAround ? {margin: SPACING.space_12} : {},
           {maxWidth: cardWidth},
         ]}>
         <Image
